@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  central-dashboard-frontend:
+    build: ./central-dashboard/frontend
+    ports:
+      - "3000:3000"
+  central-dashboard-backend:
+    build: ./central-dashboard/backend
+    ports:
+      - "8000:8000"
+  # Repeat the same for other apps
