@@ -1,0 +1,8 @@
+{
+  "commands": [
+    {
+      "type": "com.okta.user.progressive.profile.update",
+      "value": { "npnID": "" }
+    }
+  ]
+}

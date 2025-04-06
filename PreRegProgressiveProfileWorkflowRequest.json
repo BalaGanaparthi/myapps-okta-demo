@@ -1,0 +1,67 @@
+{
+  "eventId": "Y3P7vMYuRVCP2Qr5HvO9ew",
+  "eventTime": "2025-03-10T05:53:28.000Z",
+  "eventType": "com.okta.user.pre-registration",
+  "eventTypeVersion": "1.0",
+  "contentType": "application/json",
+  "cloudEventVersion": "0.1",
+  "source": "rulktnmdz3tBAJZUj1d7",
+  "requestType": "progressive.profile",
+  "data": {
+    "context": {
+      "request": {
+        "id": "55945ba56bf0caf8b0b4cf27393886c3",
+        "method": "POST",
+        "url": {
+          "value": "/idp/idx/enroll/update"
+        },
+        "ipAddress": "99.97.24.174"
+      },
+      "session": {
+        "id": "idxbO2ucKIxSzuCq6k0So8mKw",
+        "userId": "00uku3s34d7pUy8b61d7",
+        "login": "test.user001@yopmail.com",
+        "createdAt": "2025-03-10T05:53:12.000Z",
+        "expiresAt": "2025-03-10T07:53:28.000Z",
+        "status": "ACTIVE",
+        "lastPasswordVerification": "2025-03-10T05:50:45.000Z",
+        "lastFactorVerification": "2025-03-10T05:53:07.000Z",
+        "amr": [
+          "MULTIPLE_CHANNEL_AUTHENTICATION",
+          "SMS_MESSAGE",
+          "PASSWORD",
+          "MULTIFACTOR_AUTHENTICATION",
+          "EMAIL"
+        ],
+        "idp": {
+          "id": "00okpxm9yiNZCbsXx1d7",
+          "type": "OKTA"
+        },
+        "mfaActive": false
+      },
+      "user": {
+        "id": "00uku3s34d7pUy8b61d7",
+        "passwordChanged": "2025-03-10T05:50:45.000Z",
+        "profile": {
+          "login": "test.user001@yopmail.com",
+          "firstName": "Test",
+          "lastName": "User001",
+          "locale": "en",
+          "timeZone": "America/Los_Angeles"
+        },
+        "_links": {
+          "groups": {
+            "href": "https://bcbsks-bala.oktapreview.com/api/v1/users/00uku3s34d7pUy8b61d7/groups"
+          },
+          "factors": {
+            "href": "https://bcbsks-bala.oktapreview.com/api/v1/users/00uku3s34d7pUy8b61d7/factors"
+          }
+        }
+      }
+    },
+    "action": "ALLOW",
+    "userProfileUpdate": {
+      "npnID": "1234"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "commands": [],
+  "error": {
+    "errorSummary": "Incorrect employer number. Enter an even employer number.",
+    "errorCauses": [
+      {
+        "errorSummary": "Employer number must be an even number.",
+        "reason": "INVALID_EMPLOYER_NUMBER",
+        "locationType": "body",
+        "location": "data.userProfile.npnID",
+        "domain": "end-user"
+      }
+    ]
+  }
+}
