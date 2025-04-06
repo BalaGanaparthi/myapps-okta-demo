@@ -1,0 +1,23 @@
+{{template "header" .}}
+<div id="content" class="container">
+
+  <div>
+    <h2>My Apps</h2>
+    <p>Hello, <span>{{ .Profile.name }}</span>. Below are the ready to access apps.
+    </p>
+
+    <div class="container">
+        {{ range $key, $value := .ReadyToAccessApps }}
+        <div class="tile">
+            <div class="tile-header">{{$key}}</div>
+            <div class="tile-body">Click the link below to access {{$key}}</div>
+            <div class="tile-footer">
+                <a href="{{$value}}" >Launch {{$key}}</a>
+            </div>
+        </div>
+        {{end}}
+    </div>
+
+{{template "footer"}}
+
+

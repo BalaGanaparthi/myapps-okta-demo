@@ -1,0 +1,111 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+
+  <title>My Digital Apps</title>
+</head>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .tile {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .tile-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .tile-body {
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .tile-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+<body id="samples">
+
+
+<div class="header">
+    <img src="https://secure.bcbsks.com/WebCom/Secure/images/BCBSKS_logo_small.png" alt="Header Image">
+</div>
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+    {{if .IsAuthenticated}}
+      <li><a id="profile-button" href="/profile">My Profile</a></li>
+      <li><a id="apps-button" href="/apps">My Digital Apps</a></li>
+      <li><a id="apps-button" href="/accessToken">Access Token</a></li>
+      <li><a id="apps-button" href="/idToken">ID Token</a></li>
+    {{end}}
+    </ul>
+  {{if .IsAuthenticated}}
+    <form method="post" action="/logout" class="navbar-form navbar-right">
+      <button id="logout-button" type="submit" class="btn btn-danger">Logout</button>
+    </form>
+  {{end}}
+  </div>
+</nav>
+{{end}}
