@@ -1,0 +1,29 @@
+{{template "header" .}}
+<div id="content" class="container">
+
+  <div>
+    <p>Hello, <span>{{ .Profile.name }}</span>. Check your access token claims.
+    </p>
+  </div>
+
+
+  <h2>Access Token Claims</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Claim</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range $key, $value := .AccessTokenClaims}}
+            <tr>
+                <td>{{$key}}</td>
+                <td>{{$value}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+  
+</div>
+{{template "footer"}}
